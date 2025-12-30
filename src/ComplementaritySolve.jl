@@ -30,6 +30,8 @@ using PATHSolver: PATHSolver
 ## Fast Batching Support
 using NNlib: NNlib, batched_mul, batched_mul!, batched_transpose, ⊠
 using Polyester: Polyester, @batch
+## Precompilation
+using PrecompileTools: PrecompileTools
 
 import CommonSolve: init, solve, solve!
 import ChainRulesCore as CRC
@@ -95,6 +97,8 @@ include("solutions.jl")
 
 include("sensitivity/lcp.jl")
 include("sensitivity/mcp.jl")
+
+include("precompilation.jl")
 
 export LinearComplementarityProblem, MixedLinearComplementarityProblem,
        NonlinearComplementarityProblem, MixedComplementarityProblem
